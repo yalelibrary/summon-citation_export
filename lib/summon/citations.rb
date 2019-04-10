@@ -1,15 +1,17 @@
 require 'yaml'
 require 'summon'
-require "summon/refworks/version"
+require "summon/citations/version"
+
 module Summon
-  module Refworks
-    def to_refworks(options = {})
-      Builder.build self, options
+  module Citations
+    # also accepts 'refworks', 'endnote'
+    def to_citation(options = {}, format_type = 'ris')
+      Builder.build self, options, format_type
     end
 
-    def to_refworks_text(options = {})
+    def to_citations_text(options = {})
       buffer = StringIO.new
-      to_refworks(options).each do |key, values|
+      to_citation(options).each do |key, values|
         values.each do |value|
           buffer.puts "#{key} #{value}"
         end
@@ -20,17 +22,17 @@ module Summon
     module Builder
       define_method(:blank) {''}
 
-      def self.build(document, options)
+      def self.build(document, options, format_type)
         document.extend self
-        document.to_refworks_tagged_format options
+        document.to_citation_tagged_format options
       end
 
-      def refworks_tags
-        filename = File.expand_path("../mappings.rb", __FILE__)
+      def citations_tags(format_type)
+        filename = File.expand_path("../{#format_type}_mappings.rb", __FILE__)
         eval(File.read(filename), binding, filename, 1)
       end
 
-      def refworks_normal(value)
+      def citations_normal(value)
         if value.kind_of?(Array)
           value.tag_per_value? ? value : [value.join(', ')]
         else
@@ -38,15 +40,15 @@ module Summon
         end.compact
       end
 
-      def content_type_to_reference_type
-        mapping = YAML.load(File.read File.expand_path("../RT.yaml", __FILE__))
+      def content_type_to_reference_type(format_type)
+        mapping = YAML.load(File.read File.expand_path("../{#format_type}.yaml", __FILE__))
         mapping[content_type] || 'Generic'
       end
 
-      def to_refworks_tagged_format(options)
+      def to_citation_tagged_format(options)
         {}.tap do |tags|
-          refworks_tags.merge(options).each do |tag, mapping|
-            tags[tag] = refworks_normal case mapping
+          citations_tags.merge(options).each do |tag, mapping|
+            tags[tag] = citations_normal case mapping
             when Symbol then send(mapping)
             when Proc then mapping.call()
             else mapping; end
@@ -56,7 +58,7 @@ module Summon
     end
   end
   class Document
-    include Refworks
+    include Citations
   end
 end
 
