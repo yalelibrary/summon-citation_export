@@ -1,0 +1,163 @@
+# This file is a mapping of Summon content types to
+# corresponding Refworks 'reference types'. If a
+# mapping is not found, or is left blank, then
+# the 'Generic reference type will be used.
+# see http://www.refworks.com/rwathens/help/RefWorks_Tagged_Format.htm
+# for a complete listing of reference types.
+
+# "newspaper article"         => "Newspaper Article",
+# "journal article"           => "Journal Article",
+# "dissertation"              => 'Dissertation/Thesis',
+# "book"                      => "Book, Whole",
+# "patent"                    => "Patent",
+# "conference proceeding"     => "Conference Proceedings",
+# "report"                    => "Report",
+# "ebook"                     => "Book, Whole",
+# "book chapter"              => "Book, Section",
+# "journal"                   => "Journal, Electronic",
+# "ejournal"                  => "Journal, Electronic",
+# "map"                       => "Map",
+# "music score"               => "Music Score",
+# "video recording"           => 'Video/DVD',
+# "computer file"             => "Computer Program",
+# "photograph"                => "Artwork",
+# "audio recording"           => "Sound Recording",
+# "image"                     => "Artwork",
+# "poster"                    => "Artwork",
+# "paper"                     => "Report",
+# "government document"       => "Report",
+# "manuscript"                => "Book, Whole",
+# "musical score"             => "Music Score",
+# "trade publication article" => "Journal, Electronic",
+# "trade publication"         => "Journal, Electronic",
+# "magazine"                  => "Journal, Electronic"
+
+
+Album:
+Architectural Drawing:
+Archival Material:
+Art: Artwork
+Artifact:
+Atlas:
+Audio Recording: Sound Recording
+Audio Tape:
+Blueprints:
+Book: Book, Whole
+Book Chapter: Book, Section
+Book Review:
+Case:
+Catalog:
+Ceremonial Object:
+Citation:
+Clothing:
+Compact Disc:
+Computer File: Computer Program
+Course Reading:
+Conference Proceeding: Conference Proceedings
+Data Set:
+Database:
+Dissertation: Dissertation/Thesis
+Drawing:
+DVD: Video/ DVD
+eBook: Book, Whole
+eJournal: Journal, Electronic
+Electronic Resource:
+Equipment:
+Exam:
+Film:
+Film Script:
+Filmstrip:
+Finding Aid:
+Furnishing:
+Globe:
+Government Document: Report
+Graphic Arts:
+Houseware:
+Ignored:
+Image: Artwork
+Implements:
+Interactive Media:
+Journal: Journal, Electronic
+Journal Article: Journal Article
+Kit:
+Library Holding:
+Magazine: Journal, Electronic
+Magazine Article:
+Manuscript: Book, Whole
+Map: Map
+Market Research:
+Microfilm:
+Microform:
+Model:
+Music Manuscript:
+Music Score: Music Score
+Music Recording:
+Musical Instrument:
+Newsletter:
+Newspaper:
+Newspaper Article: Newspaper Article
+Painting:
+Pamphlet:
+Paper: Report
+Patent: Patent
+Personal Article:
+Personal Narrative:
+Photograph: Artwork
+Poem:
+Postcard:
+Poster: Artwork
+Play:
+Presentation:
+Publication:
+Publication Article:
+Realia:
+Reference:
+Report: Report
+Research Guide:
+Sheet Music:
+Slide:
+Special Collection:
+Spoken Word Recording:
+Standard:
+Streaming Audio:
+Streaming Video:
+Technical Report:
+Tool:
+Trade Publication: Journal, Electronic
+Trade Publication Article: Journal, Electronic
+Transcript:
+Unknown:
+Video Recording: Video/DVD
+Web Resource:
+Archival Material/Manuscripts:
+Audio-visual:
+CD/DVD:
+Digital Collection:
+Learning Object:
+Library Research Guide:
+Online Archival Material:
+Online Audio Recording:
+Online Dissertation:
+Online Image:
+Online Map:
+Online Music Score: Music Score
+Online Video Recording:
+Performance:
+Research Publication:
+Streaming Audio:
+Streaming Video:
+Student Thesis:
+Article:
+Serial:
+Video Cassette:
+Video DVD:
+Music CD:
+Music LP:
+Music:
+Audio Book on Cassette:
+Audio Book on CD:
+Sound Recording:
+Maps and Atlases:
+Software:
+Text:
+Mixed:
