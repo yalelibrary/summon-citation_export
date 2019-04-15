@@ -67,7 +67,7 @@ module Summon
       end
 
       def content_type_to_reference_type
-        mapping = YAML.load(File.read File.expand_path("../#{@format_type}.yaml", __FILE__))
+        mapping = YAML.load(File.read File.expand_path("../#{@format_type}_content_types.yaml", __FILE__))
         mapping[content_type] || 'Generic'
       end
 
