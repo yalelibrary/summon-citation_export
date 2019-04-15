@@ -1,9 +1,9 @@
 require 'yaml'
 require 'summon'
-require "summon/citations/version"
+require "summon/citation_export/version"
 
 module Summon
-  module Citations
+  module CitationExport
     # also accepts 'refworks', 'endnote'
     def to_citation(format_Type = 'ris', options = {})
       Builder.build self, options, format_type
