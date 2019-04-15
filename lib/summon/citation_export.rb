@@ -84,7 +84,7 @@ module Summon
     end
   end
   class Document
-    include Citations
+    include CitationExport
   end
 end
 
