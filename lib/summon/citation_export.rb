@@ -26,7 +26,6 @@ module Summon
     end
 
     def to_ris(options = {})
-      byebug
       to_citation('ris', options)
     end
 
