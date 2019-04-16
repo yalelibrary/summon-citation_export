@@ -33,7 +33,7 @@
   N1: blank, #note
   NV: ->() { volume }, #number of volumes
   OP: ->() { publication_place }, #original Publication
-  PB: ->()  ->() { publisher }, #Publisher
+  PB: ->() { publisher }, #Publisher
   PY: ->() { publication_date.year.to_s }, #Publication Year
   SN: ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
   ER: blank
