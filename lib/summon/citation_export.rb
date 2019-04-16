@@ -6,7 +6,7 @@ module Summon
   module CitationExport
     # also accepts 'refworks', 'endnote'
     def to_citation(format_type, options = {})
-      Builder.build self, options, format_type
+      Builder.build self, format_type, options
     end
 
     def to_refworks(options = {})
@@ -26,6 +26,7 @@ module Summon
     end
 
     def to_ris(options = {})
+      byebug
       to_citation('ris', options)
     end
 
@@ -46,15 +47,13 @@ module Summon
     module Builder
       define_method(:blank) {''}
 
-      def self.build(document, options, format_type)
+      def self.build(document, format_type, options)
         document.extend self
-        document.to_citation_tagged_format options
-        @options = options
-        @format_type = format_type
+        document.to_citation_tagged_format(format_type, options)
       end
 
-      def citations_tags
-        filename = File.expand_path("../#{@format_type}_mappings.rb", __FILE__)
+      def citations_tags(format_type)
+        filename = File.expand_path("../#{format_type}_mappings.rb", __FILE__)
         eval(File.read(filename), binding, filename, 1)
       end
 
@@ -66,14 +65,14 @@ module Summon
         end.compact
       end
 
-      def content_type_to_reference_type
-        mapping = YAML.load(File.read File.expand_path("../#{@format_type}_content_types.yaml", __FILE__))
+      def content_type_to_reference_type(format_type)
+        mapping = YAML.load(File.read File.expand_path("../#{format_type}_content_types.yaml", __FILE__))
         mapping[content_type] || 'Generic'
       end
 
-      def to_citation_tagged_format
+      def to_citation_tagged_format(format_type, options)
         {}.tap do |tags|
-          citations_tags.merge(@options).each do |tag, mapping|
+          citations_tags(format_type).merge(options).each do |tag, mapping|
             tags[tag] = citations_normal case mapping
             when Symbol then send(mapping)
             when Proc then mapping.call()
