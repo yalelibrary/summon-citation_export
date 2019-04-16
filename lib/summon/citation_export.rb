@@ -5,7 +5,7 @@ require "summon/citation_export/version"
 module Summon
   module CitationExport
     # also accepts 'refworks', 'endnote'
-    def to_citation(format_Type = 'ris', options = {})
+    def to_citation(format_type = 'ris', options = {})
       Builder.build self, options, format_type
     end
 
@@ -26,6 +26,7 @@ module Summon
     end
 
     def to_ris(options = {})
+      byebug
       to_citation(options)
     end
 
