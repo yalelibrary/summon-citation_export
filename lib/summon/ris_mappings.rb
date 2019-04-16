@@ -31,7 +31,7 @@
   IS: blank, #number
   M3: blank, #type of work
   N1: blank, #note
-  NV:() { volume }, #number of volumes
+  NV: ->() { volume }, #number of volumes
   OP: ->() { publication_place }, #original Publication
   PB: ->()  ->() { publisher }, #Publisher
   PY: ->() { publication_date.year.to_s }, #Publication Year
