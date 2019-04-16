@@ -8,7 +8,7 @@
 #so some mappings are inevitably going to be blank.
 
 {
-  TY: ->() { content_type_to_reference_type }, #Reference Type temp use this as the function name
+  TY: ->() { content_type_to_ris_type }, #Reference Type temp use this as the function name
   AU: ->() { authors.map(&:name) + corporate_authors.map(&:name) }, #Primary Authors
   A2: blank, #Secondary Authors
   A3: blank, #Tertiary Authors
@@ -18,7 +18,7 @@
   AN: blank, #Accession Number
   CN: blank, #Call Number
   CY: ->() { publication_place }, #Place Published
-  DB: ->() { database_name }, #database name
+  DB: ->() { database_title }, #database name
   DO: ->() { doi }, #Digital Object Identifier
   DP: blank, #Database Provider
   ET: blank, #Edition
@@ -36,5 +36,5 @@
   PB: ->() { publisher }, #Publisher
   PY: ->() { publication_date.year.to_s }, #Publication Year
   SN: ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
-  ER: blank
+  ER: blank, #end
 }
