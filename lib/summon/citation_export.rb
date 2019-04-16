@@ -5,7 +5,7 @@ require "summon/citation_export/version"
 module Summon
   module CitationExport
     # also accepts 'refworks', 'endnote'
-    def to_citation(format_type = 'ris', options = {})
+    def to_citation(format_type, options = {})
       Builder.build self, options, format_type
     end
 
@@ -26,15 +26,14 @@ module Summon
     end
 
     def to_ris(options = {})
-      byebug
-      to_citation(options)
+      to_citation('ris', options)
     end
 
     def to_ris_text(options = {})
-      to_citation_text(options)
+      to_citation_text('ris', options)
     end
 
-    def to_citation_text(format_type = 'ris', options = {})
+    def to_citation_text(format_type, options = {})
       buffer = StringIO.new
       to_citation(format_type, options).each do |key, values|
         values.each do |value|
