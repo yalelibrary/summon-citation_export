@@ -14,7 +14,7 @@
   'A3 -': blank, #Tertiary Authors
   'A4 -': blank, #Quaternary Authors
   'AB -': ->() {  abstract }, #Abstract
-  'AD -':  blank, #Author Address
+  'AD -': blank, #Author Address
   'AN -': blank, #Accession Number
   'CN -': blank, #Call Number
   'CY -': ->() { publication_place }, #Place Published
@@ -28,13 +28,23 @@
   'L4 -': blank, #figure
   'LA -': ->() { languages }, #Language
   'LB -': blank, #label
-  'IS -': blank, #number
-  'M3 -': blank, #type of work
-  'N1 -': blank, #note
+  'M1 -': ->() { issue }, #series volume
+  'M3 -': ->() { content_type }, #type of work
+  'N1 -': ->() { isi_cited_references_count ? uri : url }, #Notes
   'NV -': ->() { volume }, #number of volumes
   'OP -': ->() { publication_place }, #original Publication
   'PB -': ->() { publisher }, #Publisher
   'PY -': ->() { publication_date.year.to_s }, #Publication Year
-  'SN -': ->() { issns.empty? ? isbns : issns }, #ISSN or ISBN
+  'RN -': blank, #research notes
+  'SE -': blank, #chapter
+  'SN -': ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
+  'SP -': ->() { start_page }, #Start Page
+  'T1 -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
+  'T2 -': blank, #secondary title
+  'T3 -': ->() { publication_title }, #Periodical Full
+  'TT -': blank, #translate title
+  'TA -': blank, #translate author
+  'UR -': ->() { open_url }, #URL
+  'VL -': ->() { volume }, #Volume
   'ER -': blank, #end
 }
