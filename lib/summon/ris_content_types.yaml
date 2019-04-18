@@ -1,0 +1,162 @@
+# This file is a mapping of Summon content types to:
+# corresponding RIS 'reference types'. If a
+# mapping is not found, or is left blank, then
+# the 'Generic reference type will be used.
+# see https://support.clarivate.com/Endnote/s/article/EndNote-Directions-for-implementing-EndNote-Direct-Export?r=12&other.CA_OpenACase_.getCommunityId=1&other.LiveAgentChatButton.getContact=1&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1&ui-communities-components-aura-components-forceCommunity-controller.ForceCommunityFeed.getModel=1&ui-communities-components-aura-components-forceCommunity-controller.Headline.getInitData=1&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1&ui-self-service-components-controller.ArticleTopicList.getTopics=1&ui-self-service-components-controller.ArticleView.getArticleHeaderDetail=1&language=en_US
+# for a complete listing of reference types.
+
+# "newspaper article"         => "NEWS",
+# "journal article"           => "JOUR",
+# "dissertation"              => 'THES',
+# "book"                      => "BOOK",
+# "patent"                    => "PAT",
+# "conference proceeding"     => "CONF",
+# "report"                    => "RPRT",
+# "ebook"                     => "EBOOK",
+# "book chapter"              => "CHAP",
+# "journal"                   => "JOUR",
+# "ejournal"                  => "JOUR",
+# "map"                       => "MAP",
+# "music score"               => "MUSIC",
+# "video recording"           => 'VIDEO',
+# "computer file"             => "COMP",
+# "photograph"                => "ART",
+# "audio recording"           => "GEN",
+# "image"                     => "ART",
+# "poster"                    => "ART",
+# "paper"                     => "RPRT",
+# "government document"       => "GOVDOC",
+# "manuscript"                => "MANSCPT",
+# "trade publication article" => "JOUR",
+# "trade publication"         => "JOUR",
+# "magazine"                  => "MGZN"
+
+
+Album:
+Architectural Drawing:
+Archival Material:
+Art: ART
+Artifact:
+Atlas: MAP
+Audio Recording:
+Audio Tape: 
+Blueprints:
+Book: Book
+Book Chapter: CHAP
+Book Review:
+Case: CASE
+Catalog: CTLG
+Ceremonial Object:
+Citation:
+Clothing:
+Compact Disc:
+Computer File: COMP
+Course Reading:
+Conference Proceeding: CONF
+Data Set: DATA
+Database: AGGR
+Dissertation: THES
+Drawing: ART
+DVD: VIDEO
+eBook: EBOOK
+eJournal: EJOUR
+Electronic Resource: ELEC
+Equipment:
+Exam:
+Film: MPCT
+Film Script:
+Filmstrip:
+Finding Aid:
+Furnishing:
+Globe:
+Government Document: GOVDOC
+Graphic Arts:
+Houseware:
+Ignored:
+Image: ART
+Implements:
+Interactive Media:
+Journal: JFULL
+Journal Article: JOUR
+Kit:
+Library Holding:
+Magazine: 
+Magazine Article: MGZN
+Manuscript: MANSCPT
+Map: MAP
+Market Research:
+Microfilm:
+Microform:
+Model:
+Music Manuscript: MUSIC
+Music Score: MUSIC
+Music Recording: 
+Musical Instrument:
+Newsletter:
+Newspaper: NEWS
+Newspaper Article: NEWS
+Painting: ART
+Pamphlet:
+Paper: 
+Patent: PAT
+Personal Article: PCOMM
+Personal Narrative: PCOMM
+Photograph: Artwork
+Poem:
+Postcard:
+Poster: ART
+Play:
+Presentation:
+Publication:
+Publication Article: JOUR
+Realia:
+Reference:
+Report: RPRT
+Research Guide:
+Sheet Music: MUSIC
+Slide: SLIDE
+Special Collection:
+Spoken Word Recording: SOUND
+Standard:
+Streaming Audio: 
+Streaming Video: VIDEO
+Technical Report: RPRT
+Tool:
+Trade Publication: JOUR
+Trade Publication Article: JOUR
+Transcript:
+Unknown:
+Video Recording: VIDEO
+Web Resource: ELEC
+Archival Material/Manuscripts: MANSCPT
+Audio-visual: ADVS
+CD/DVD:
+Digital Collection:
+Learning Object:
+Library Research Guide:
+Online Archival Material:
+Online Audio Recording:
+Online Dissertation: THES
+Online Image:
+Online Map:
+Online Music Score: 
+Online Video Recording:
+Performance:
+Research Publication:
+Streaming Audio:
+Streaming Video:
+Student Thesis: THES
+Article:
+Serial:
+Video Cassette:
+Video DVD:
+Music CD: MUSIC
+Music LP: MUSIC
+Music: MUSIC
+Audio Book on Cassette:
+Audio Book on CD:
+Sound Recording: SOUND
+Maps and Atlases: MAP
+Software: COMP
+Text:
+Mixed:
