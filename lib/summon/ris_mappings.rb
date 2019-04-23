@@ -44,7 +44,7 @@
   'T3 -': ->() { publication_title }, #Periodical Full
   'TT -': blank, #translate title
   'TA -': blank, #translate author
-  'UR -': ->() { open_url }, #URL
+  'UR -': ->() { link }, #URL link
   'VL -': ->() { volume }, #Volume
   'ER -': blank, #end
 }
