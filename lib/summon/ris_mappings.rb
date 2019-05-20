@@ -21,17 +21,20 @@
   'DB  -': ->() { database_title }, #database name
   'DO  -': ->() { doi }, #Digital Object Identifier
   'DP  -': blank, #Database Provider
+  'EP  -': ->() { end_page }, #Endpage
   'ET  -': blank, #Edition
+  'IS  -': ->() { issue }, #series volume
+  'JF  -': ->() { publication_title }, #Periodical Full
   'J2  -': blank, #alternate title
   'KW  -': ->() { subject_terms.tag_per_value }, #keywork
   'L1  -': blank, #file attachments
   'L4  -': blank, #figure
   'LA  -': ->() { languages }, #Language
   'LB  -': blank, #label
-  'M1  -': ->() { issue }, #series volume
+  'M1  -': blank, #number 
   'M3  -': ->() { content_type }, #type of work
   'N1  -': ->() { isi_cited_references_count ? uri : url }, #Notes
-  'NV  -': ->() { volume }, #number of volumes
+  'NV  -': blank, #number of volumes
   'OP  -': ->() { publication_place }, #original Publication
   'PB  -': ->() { publisher }, #Publisher
   'PY  -': ->() { publication_date.year.to_s }, #Publication Year
@@ -40,11 +43,13 @@
   'SN  -': ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
   'SP  -': ->() { start_page }, #Start Page
   'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
+  'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
   'T2  -': blank, #secondary title
-  'T3  -': ->() { publication_title }, #Periodical Full
+  'T3  -': blank ,#tertiary title
   'TT  -': blank, #translate title
   'TA  -': blank, #translate author
-  'UR  -': ->() { open_url }, #URL
+  'U5  -': ->() { open_url }, #openURL (user-custom field)
+  'UR  -': ->() { url }, #URL
   'VL  -': ->() { volume }, #Volume
   'ER  -': blank, #end
 }
