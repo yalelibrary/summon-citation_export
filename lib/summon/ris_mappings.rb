@@ -49,7 +49,7 @@
   'TT  -': blank, #translate title
   'TA  -': blank, #translate author
   'U5  -': ->() { open_url }, #openURL (user-custom field)
-  'UR  -': ->() { url }, #URL
+  'UR  -': ->() { uri }, #URL
   'VL  -': ->() { volume }, #Volume
   'ER  -': blank, #end
 }
