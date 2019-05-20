@@ -33,7 +33,7 @@
   'LB  -': blank, #label
   'M1  -': blank, #number 
   'M3  -': ->() { content_type }, #type of work
-  'N1  -': ->() { isi_cited_references_count ? uri : url }, #Notes
+  'N1  -': blank, #Notes
   'NV  -': blank, #number of volumes
   'OP  -': ->() { publication_place }, #original Publication
   'PB  -': ->() { publisher }, #Publisher
@@ -49,7 +49,7 @@
   'TT  -': blank, #translate title
   'TA  -': blank, #translate author
   'U5  -': ->() { open_url }, #openURL (user-custom field)
-  'UR  -': ->() { uri }, #URL
+  'UR  -': ->() { uri ? uri : link }, #if no URI provided, use link we're given
   'VL  -': ->() { volume }, #Volume
   'ER  -': blank, #end
 }
