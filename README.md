@@ -20,8 +20,8 @@ summon-refworks requires ruby > 1.9.2
 
 Gemfile
 
-`gem 'summon-citation-export'`
+`gem 'summon-citation_export'`
 
 standalone
 
-`gem install summon-refworks`
+`gem install summon-citation_export`
