@@ -43,7 +43,6 @@
   'SN  -': ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
   'SP  -': ->() { start_page }, #Start Page
   'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
-  'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
   'T2  -': blank, #secondary title
   'T3  -': blank ,#tertiary title
   'TT  -': blank, #translate title
