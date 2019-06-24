@@ -8,7 +8,7 @@
 #so some mappings are inevitably going to be blank.
 
 {
-  'TY  -':  ->{ content_type_to_ris_type }, #Reference Type temp use this as the function name
+  'TY  -': ->() { content_type_to_ris_type }, #Reference Type temp use this as the function name
   'AU  -': ->() { authors.map(&:name) + corporate_authors.map(&:name) }, #Primary Authors
   'A2  -': blank, #Secondary Authors
   'A3  -': blank, #Tertiary Authors
@@ -43,13 +43,12 @@
   'SN  -': ->() { issns.empty? ? isbns : issns }, #ISSN/ISBN
   'SP  -': ->() { start_page }, #Start Page
   'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
-  'T1  -': ->() { subtitle ? "#{title}: #{subtitle}" : title}, #Primary Title
   'T2  -': blank, #secondary title
   'T3  -': blank ,#tertiary title
   'TT  -': blank, #translate title
   'TA  -': blank, #translate author
   'U5  -': ->() { open_url }, #openURL (user-custom field)
-  'UR  -': ->() { uri ? uri : link }, #if no URI provided, use link we're given
+  'UR  -': ->() { link ? link : uri }, #if no URI provided, use link we're given
   'VL  -': ->() { volume }, #Volume
   'ER  -': blank, #end
 }
