@@ -33,7 +33,7 @@ module Summon
 
       def ris_normal(value)
         if value.kind_of?(Array)
-          value.tag_per_value? ? value : [value.join(', ')]
+          value.tag_per_value? ? value : [value.join('; ')]
         else
           [value]
         end.compact
