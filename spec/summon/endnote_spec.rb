@@ -13,6 +13,15 @@ describe Summon::Endnote do
     expect(@doc.to_endnote[:'%0']).to eq(['Generic'])
   end
 
+  it "primary title" do
+    expect(@doc.to_endnote).to have_key(:'%T')
+    expect(@doc.to_endnote[:'%T']).to eq(['OBITUARIES'])
+  end
+
+  it "author " do
+    expect(@doc.to_endnote).to have_key(:'%A')
+    expect(@doc.to_endnote[:'%A']).to eq(["Liang, Yong X, Gu, Miao N, Wang, Shi D, Chu, Hai C"])
+  end
 
   describe "controlling how multiple values are concatenated" do
     before do
@@ -23,7 +32,7 @@ describe Summon::Endnote do
       expect(@doc.to_endnote(:multi_value => lambda {@doc.multi_value})[:multi_value]).to eql (["1, 2, 3"])
     end
 
-    it "accepts the option to preseve multiple values per field" do
+    it "accepts the option to preserve multiple values per field" do
       expect(@doc.to_endnote(:multi_value => lambda {@doc.multi_value.tag_per_value})[:multi_value]).to eql ([1, 2, 3])
     end
   end
