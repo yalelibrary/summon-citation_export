@@ -4,7 +4,6 @@ describe Summon::Ris do
   before do
     @search = Summon::Service.new(:transport => Summon::Transport::Canned.new).search
     @doc = @search.documents.first
-    #byebug
   end
   it "extends summon document" do
     expect(@doc.to_ris[:'TY  -']).to eq(['NEWS'])
